@@ -1,11 +1,8 @@
 #include<iostream>
 using namespace std;
 
-int find3Numbers(int A[], int arr_size, int sum)
+int triplet(int A[], int arr_size, int sum)
 {
-    int l, r;
- 
-    
     for (int i = 0; i < arr_size-2; i++)
     {
        
@@ -16,25 +13,25 @@ int find3Numbers(int A[], int arr_size, int sum)
            {
                if (A[i] + A[j] + A[k] == sum)
                {
-                 cout<<"Triplet is "<<A[i]<<A[j]<< A[k];
-                 return true;
+                 cout<<"Triplet is "<<A[i]<<"\t"<<A[j]<<"\t"<< A[k];
+                 
                }
            }
        }
     }
  
   
-    return false;
+    
 }
  
 
 int main()
 {
-    int A[] = {1,2,3,4,5,4};
-    int sum = 22;
+    int A[] = {1,3,2,4,5,4};
+    int sum = 13;
     int arr_size = sizeof(A)/sizeof(A[0]);
  
-    find3Numbers(A, arr_size, sum);
+    triplet(A, arr_size, sum);
  
     return 0;
 }
